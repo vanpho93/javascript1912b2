@@ -38,4 +38,6 @@ var p = new Person('Huong', 30, cty);
 var p2 = new Person('Son', 18, cty);
 
 p2.partner = p;
-console.log(JSON.stringify(p2));
+p.partner = p2;
+
+console.log(p2);
