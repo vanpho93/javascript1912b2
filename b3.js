@@ -1,4 +1,6 @@
-function Person(name, age){
+function Person(name, age, congty){
+  this.partner = null;
+  this.congty = congty;
   this.name = name;
   var tuoi = age;
   var that = this;
@@ -16,10 +18,24 @@ function Person(name, age){
   }
 }
 
-var k = new Person('Khoa', 18);
-var p = new Person('Huong', 30);
+// var k = new Person('Khoa', 18);
+// var p = new Person('Huong', 30);
 // console.log(k);
 // k.setAge(-19);
 // console.log(k.getAge());
 // console.log('Huong', p.getAge());
-p.showHello();
+// p.showHello();
+
+function CongTy(tenCT, soNV){
+  this.tenCT = tenCT;
+  this.soNV = soNV;
+}
+
+var cty = new CongTy('FPT', 2000);
+//console.log(cty);
+
+var p = new Person('Huong', 30, cty);
+var p2 = new Person('Son', 18, cty);
+
+p2.partner = p;
+console.log(JSON.stringify(p2));
