@@ -13,6 +13,7 @@ function Person(name, age){
 }
 
 var p1 = new Person('Khoa Pham', 18);
+p1.age = 19;
 p1.sayHello();
 console.log(p1.get());
 console.log('Ten', p1.name);
@@ -25,4 +26,14 @@ function KhoaHoc(tenKH, hocPhi){
 }
 
 var node = new KhoaHoc('NodeJS', '3000');
+
+var person2 = {
+  name: 'Khoa',
+  age: 18,
+  getInfo(){
+    console.log(this.name + ': ' + this.age);
+  }
+}
+
+person2.getInfo();
 // console.log(node);
